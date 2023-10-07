@@ -1,0 +1,21 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content;
+    padding: 0 15px;
+    padding-top: 45px;
+
+    @media (min-width: 768px) {
+        & {
+            padding-top: 12px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, min-content);
+        }
+    }
+
+    @media (min-width: 991px) {
+        padding: 25px 60px 0 60px;
+        grid-template-rows: 1fr min-content;
+        grid-template-columns: 1fr min-content;
+    }
+}

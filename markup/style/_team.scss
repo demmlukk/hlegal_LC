@@ -1,0 +1,88 @@
+.team {
+
+    &__list {
+        margin-top: 30px;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+    }
+
+    &__crumbs {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    &__box-img {
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    &__box-name {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $place-color;
+    }
+
+    &__box-dec {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $btn-grey-color;
+        margin-top: 5px;
+    }
+
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 3px;
+        width: 32px;
+        height: 32px;
+        background: $menu-list-link;
+        border-radius: 50%;
+        transition: ease 0.4s;
+    }
+
+    &__link path {
+        transition: ease 0.4s;
+    }
+
+    &__link:hover {
+        background: $grey-hover;
+    }
+
+    &__link:hover path {
+        stroke: $button-bg-color;
+    }
+
+    @media (min-width:768px) {
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        &__item {
+            margin-bottom: 0;
+        }
+
+        &__box-img {
+            height: 400px;
+        }
+    }
+
+    @media (min-width: 991px) {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

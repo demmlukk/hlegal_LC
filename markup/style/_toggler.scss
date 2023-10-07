@@ -1,0 +1,50 @@
+.toggler {
+
+    &__checkbox {
+        width: 222px;
+        height: 42px;
+        background-color: #E6E6F0;
+        border-radius: 12px;
+        position: relative;
+        color: #323264;
+        overflow: hidden;
+    }
+
+    #checkbox_toggle {
+        display: none;
+    }
+
+    &__checkbox &__toggle {
+        width: 105px;
+        height: 38px;
+        position: absolute;
+        border-radius: 10px;
+        left: 2px;
+        cursor: pointer;
+        transition: 0.5s;
+        background: #fff;
+    }
+    
+    &__checkbox &__slide {
+        width: 232px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+    }
+    
+    &__checkbox &__slide &__text {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        z-index: 100;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__check:checked+&__checkbox &__slide &__toggle {
+        transform: translateX(113px);
+    }
+
+}

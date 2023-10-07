@@ -1,0 +1,148 @@
+.footer {
+    padding: 30px;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__place {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__place-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $place-color;
+    }
+
+    &__place-link {
+        text-decoration: none;
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $links-btn-color;
+        transition: ease 0.4s;
+    }
+
+    &__place-link:hover {
+        color: $button-bg-color;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__fb {
+        margin-top: 20px;
+    }
+
+    &__fb:hover path {
+        transition: ease 0.4s;
+        fill: $button-bg-color;
+    }
+
+    &__phone {
+        text-decoration: none;
+        color: $footer-tel-color;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 7px;
+        transition: ease 0.4s;
+    }
+
+    &__phone:hover {
+        color: $button-bg-color;
+    }
+
+    &__mail {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+        color: $links-btn-color;
+        margin-top: 10px;
+        transition: ease 0.4s;
+    }
+
+    &__mail:hover {
+        color: $button-bg-color;
+    }
+
+    &__policity-item {
+        display: flex;
+    }
+
+    &__policity {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $btn-grey-color;
+        margin-top: 30px;
+    }
+
+    @media (min-width: 768px) {
+        padding: 30px 60px;
+
+        &__text {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__policity-item {
+            grid-row: -2;
+            grid-column: 2;
+            justify-self: end;
+        }
+
+        &__policity {
+            margin-top: 0;
+        }
+
+        &__place {
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__contact {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            grid-column: span 2;
+            margin-top: 21px;
+        }
+
+        &__place-link,
+        &__fb,
+        &__mail,
+        &__phone {
+            display: inline-flex;
+            margin-top: 0;
+        }
+
+        &__phone::before,
+        &__mail::before,
+        &__place-link::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: $btn-grey-color;
+            display: inline-flex;
+            border-radius: 50%;
+            align-self: center;
+            margin: 0 10px;
+        }
+
+    }
+}

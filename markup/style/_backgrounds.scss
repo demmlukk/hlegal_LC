@@ -1,0 +1,75 @@
+.background-services {
+    @include background-with-gradient-services;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+
+    &::after {
+        content: '';
+        height: 10px;
+        background: $bg-after;
+        border-radius: 0px 0px 12px 12px;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: -10px;
+        z-index: -1;
+    }
+
+
+    &::before {
+        content: '';
+        height: 10px;
+        background: $bg-before;
+        border-radius: 0px 0px 12px 12px;
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        bottom: -20px;
+    }
+
+}
+
+.background {
+    @include background-with-gradient;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+
+    &::after {
+        content: '';
+        height: 10px;
+        background: $bg-after;
+        border-radius: 0px 0px 12px 12px;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: -10px;
+    }
+
+    &::before {
+        content: '';
+        height: 10px;
+        background: $bg-before;
+        border-radius: 0px 0px 12px 12px;
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        bottom: -20px;
+    }
+
+    @media (min-width: 768px) {
+        background-size: 893px 1024px, cover;
+    }
+
+    @media (min-width: 991px) {
+        background-size: 669px 768px, cover;
+    }
+
+    @media (min-width: 1200px) {
+        background-size: 697px 799px, cover;
+
+    }
+}
+
+.publ-bg {
+    background: $publ-bg;
+}

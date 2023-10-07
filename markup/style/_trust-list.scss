@@ -1,0 +1,106 @@
+.trust-list {
+    margin-top: 60px;
+
+    &__headline {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #323264;
+    }
+
+    &__item {
+        height: 120px;
+    }
+
+    &__item_01 {
+        background: url(/markup/images/hillel-logo.svg) no-repeat center,
+            $trust-list-bg-01;
+    }
+
+    &__item_02 {
+        background: url(/markup/images/wb-logo.svg) no-repeat center,
+            $trust-list-bg-02;
+    }
+
+    &__item_03 {
+        background: url(/markup/images/tapgerine-logo.svg) no-repeat center,
+            $trust-list-bg-03;
+    }
+
+    &__item_04 {
+        background: url(/markup/images/3dlook-logo.svg) no-repeat center,
+            $trust-list-bg-04;
+    }
+
+    &__item_05 {
+        background: url(/markup/images/orangear-logo.svg) no-repeat center,
+            $trust-list-bg-05;
+    }
+
+    &__item_06 {
+        background: url(/markup/images/adteligent-logo.svg) no-repeat center,
+            $trust-list-bg-06;
+    }
+
+    @media (min-width: 768px) {
+
+        &__item {
+            width: 100%;
+        }
+
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        &__item.visually-hidden {
+            display: block;
+            position: static;
+            margin: 0;
+            clip: auto;
+            overflow: visible;
+        }
+
+        &__item_07 {
+            background: url(/markup/images/clicky-logo.svg) no-repeat center,
+                $trust-list-bg-07;
+        }
+
+        &__item_08 {
+            background: url(/markup/images/ecolease-logo.svg) no-repeat center,
+                $trust-list-bg-08;
+        }
+
+        &__item_09 {
+            background: url(/markup/images/infra-logo.svg) no-repeat center,
+                $trust-list-bg-09;
+        }
+
+        &__item_10 {
+            background: url(/markup/images/city-logo.svg) no-repeat center,
+                $trust-list-bg-10;
+        }
+
+        &__item_11 {
+            background: url(/markup/images/art-logo.svg) no-repeat center,
+                $trust-list-bg-11;
+        }
+
+        &__item_12 {
+            background: url(/markup/images/ultumate-logo.svg) no-repeat center,
+                $trust-list-bg-12;
+        }
+    }
+
+    @media (min-width: 991px) {
+        &__grid {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+}

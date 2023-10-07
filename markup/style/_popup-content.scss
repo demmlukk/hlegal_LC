@@ -1,0 +1,142 @@
+.popup-content {
+    background-color: $menu-list-link;
+    padding: 0 30px 30px;
+    border-radius: 12px;
+    width: 650px;
+    height: 615px;
+    overflow: auto;
+
+    &__form {
+        display: grid;
+        grid-gap: 10px;
+    }
+
+    &__form input {
+        height: 56px;
+    }
+
+    &__form textarea {
+        resize: none;
+        height: 130px;
+    }
+
+    &__form input,
+    &__form textarea {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 19px;
+        color: $text-black-color;
+        line-height: 26px;
+        padding-left: 15px;
+        background-color: $text-color;
+        border: 1px solid $text-color;
+        border-radius: 8px;
+    }
+
+    &__form input:focus,
+    &__form textarea:focus {
+        outline-color: $links-btn-color;
+        color: $text-black-color;
+    }
+
+    &__form input::placeholder,
+    &__form textarea::placeholder {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $btn-grey-color;
+    }
+
+    &__form input:valid,
+    &__form textarea:valid {
+        background-color: $valid-green;
+    }
+
+    &__form input:invalid,
+    &__form textarea:invalid {
+        color: $invalid-color;
+        border-color: $invalid-color;
+    }
+
+    &__buttons {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__popup-close-btn {
+        background: transparent;
+        border: none;
+        border-radius: 8px;
+        transition: ease 0.4s;
+        align-self: flex-end;
+    }
+
+    &__popup-close-btn:hover {
+        background-color: $btn-grey-color;
+    }
+
+    &__popup-close-btn:active {
+        background-color: $btn-grey-color;
+    }
+
+    &__popup-reset-btn {
+        background: transparent;
+        border: none;
+        margin-top: 10px;
+        border-radius: 8px;
+        transition: ease 0.4s;
+    }
+
+    &__popup-reset-btn:hover {
+        background-color: $btn-grey-color;
+    }
+
+    &__popup-reset-btn:active {
+        background-color: $btn-grey-color;
+    }
+
+    &__headline {
+        margin-top: 0;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 46px;
+        @include gradient-text
+    }
+
+    &__paragraph {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $btn-grey-color;
+        margin-top: 15px;
+    }
+
+    &__submit {
+        margin-top: 0;
+        font-weight: 400;
+        border: none;
+        font-size: 16px;
+        line-height: 20px;
+        background: $links-btn-color;
+        box-shadow: 0px 0px 20px $box-shadow-blue;
+        border-radius: 12px;
+        color: $text-color;
+        padding: 18px 30px;
+        transition: ease 0.5s;
+    }
+
+    &__submit:hover {
+        background: $hover-blue;
+        box-shadow: 0px 0px 20px $hover-blue;
+    }
+
+    &__submit:active {
+        background: $active-blue;
+        box-shadow: 0px 0px 20px $active-blue;
+    }
+
+}

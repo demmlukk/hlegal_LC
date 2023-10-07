@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="icon" type="image/svg+xml" href="./images/logo-site.svg">
+    <title>Hlegal LC</title>
+</head>
+
+<body class="body">
+    <div class="popup-container">
+        <div class="popup-content">
+            <div class="popup-content__buttons">
+                <button class="popup-content__popup-reset-btn" type="button" id="resetBtn">Reset</button>
+                <button class="popup-content__popup-close-btn" id="closePopupBtn" type="button"
+                    aria-label="close-button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2" />
+                        <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+            <h2 class="popup-content__headline">We would like to help you</h2>
+            <form class="popup-content__form" action="https://formspree.io/f/mvonedoy" method="post">
+                <label for="name"></label>
+                <input class="popup-content__name" type="text" id="name" name="name" placeholder="Name" required>
+                <label for="message"></label>
+                <textarea class="popup-content__message" id="message" name="message" rows="4" placeholder="Message"
+                    required></textarea>
+                <p class="popup-content__paragraph">How to answer you?</p>
+                <label for="phone"></label>
+                <input class="popup-content__phone" type="tel" id="phone" name="phone" placeholder="Phone number"
+                    required>
+                <label for="email"></label>
+                <input class="popup-content__email" type="email" id="email" name="email" placeholder="Email" required>
+                <button class="popup-content__submit" type="submit">Send message</button>
+            </form>
+        </div>
+    </div>
+    <header class="header header--on-white container">
+        <div class="header-top header-top--on-white">
+            <ul class="lang lang--on-white">
+                <li><a class="js-lang-toggle" href="#">ук</a></li>
+                <li><a class="js-lang-toggle" href="#">ру</a></li>
+                <li><a class="js-lang-toggle active" href="#">en</a></li>
+            </ul>
+            <div class="header-top__adress header-top__adress--on-white visually-hidden"><a
+                    href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4367983,30.5278341,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800?entry=ttu">Kyiv,
+                    Mechnikova str., 14/1</a></div>
+            <a class="phone phone--on-white" href="tel:0800211927">0800 211 927</a>
+            <a class="header-top__fb header-top__fb--on-white visually-hidden" href="#"><svg width="24" height="25"
+                    viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_35736_603)">
+                        <path
+                            d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"
+                            fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_35736_603">
+                            <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg></a>
+        </div>
+        <div class="logo-box">
+            <a class="logo-box__link" href="./index.html">
+                <img src="./images/dark-logo.svg" alt="site-logo">
+            </a>
+            <div class="breadcrumbs"><svg class="breadcrumbs__svg" width="12" height="26" viewBox="0 0 12 26"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.72827 0H11.9505L3.55574 26H0.333496L8.72827 0Z"
+                        fill="#F0145A" />
+                </svg>
+                publications</div>
+        </div>
+        <nav class="menu">
+            <button class="menu__btn menu__btn--on-white js-menu-btn" type="button"><span></span></button>
+            <ul class="menu__list menu__list--on-white js-menu-list">
+                <li><a href="./about.html">about us</a></li>
+                <li><a href="./services.html">services</a></li>
+                <li><a href="./team.html">team</a></li>
+                <li><a class="active" href="./publications.html">publications</a></li>
+                <li><a href="#" id="openPopupLink">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="publ-bg" role="main" style="margin-top: 60px;">
+        <section class="publications main container" role="main">
+            <div class="publications__toggler toggler">
+                <input class="toggler__check" type="checkbox" id="checkbox_toggle">
+                <div class="toggler__checkbox">
+                    <div class="toggler__slide">
+                        <label for="checkbox_toggle" class="toggler__toggle"></label>
+                        <label for="checkbox_toggle" class="toggler__text toggler__text--n">news</label>
+                        <label for="checkbox_toggle" class="toggler__text">articles</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="publications__head">
+                <h2 class="publications__hero">We have something to tell</h2>
+            </div>
+            <div class="publications__list" style="row-gap: 30px;">
+                <div class="publications__item">
+                    <div class="publications__box">
+                        <img class="publications__box-img img-responsive" src="./images/equity.jpg" alt="equity-tablets">
+                        <div class="publications__box-text">
+                            <a class="publications__box-link" href="">Equity associate</a>
+                            <p class="publications__box-paragraph">April 22</p>
+                            <p class="publications__box-desc">I'm a jun on projects. I am a co-owner of a law firm.
+                                How
+                                it
+                                happened. Before entering my parents told me that if I…</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="publications__item">
+                    <div class="publications__box">
+                        <img class="publications__box-img img-responsive" src="./images/gdpr.jpg" alt="gpdr-firm">
+                        <div class="publications__box-text">
+                            <a class="publications__box-link" href="">Penalty for the Good Corporation: what will
+                                happen
+                                to
+                                Google and others for violating the GDPR</a>
+                            <p class="publications__box-paragraph">September 29</p>
+                            <p class="publications__box-desc">And why the recovery of 50 million euros could be a
+                                fateful
+                                precedent According to Mind.ua January 21 National Commission for Data Protection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="publications__item">
+                    <div class="publications__box">
+                        <img class="publications__box-img img-responsive" src="./images/peoples.jpg" alt="many-peoples">
+                        <div class="publications__box-text">
+                            <a class="publications__box-link" href="">Millennial Testament</a>
+                            <p class="publications__box-paragraph">August 19</p>
+                            <p class="publications__box-desc">What and how modern vloggers, opinion leaders and
+                                crypto-millionaires will inherit A typical legacy of the Ukrainian generation X
+                                looks
+                                like
+                                this: an apartment in…</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="publications__item">
+                    <div class="publications__box">
+                        <img class="publications__box-img img-responsive" src="./images/language-law.jpg"
+                            alt="language-law">
+                        <div class="publications__box-text">
+                            <a class="publications__box-link" href="">Language Law: How to Make Your Website
+                                Relevant</a>
+                            <p class="publications__box-paragraph">August 19</p>
+                            <p class="publications__box-desc">Natalia Kyryk, head of content studio Wordfactory.ua
+                                First, it's beautiful! This is the number one argument in favor of the
+                                Ukrainian-language site. Secondly, it is effective. In…</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="publications__item">
+                    <div class="publications__box">
+                        <img class="publications__box-img img-responsive" src="./images/childs.jpg"
+                            alt="childs-and-teacher">
+                        <div class="publications__box-text">
+                            <a class="publications__box-link" href="">Reimbursement of the child's tuition fees in
+                                kindergarten and school</a>
+                            <p class="publications__box-paragraph">February 5, 2018</p>
+                            <p class="publications__box-desc">What we are talking about In June this year, the
+                                Verkhovna
+                                Rada amended the Tax Code of Ukraine. From now on, parents who receive an official…
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="publications__item" style="grid-column: auto;  height: 100%; margin-bottom: 28px;">
+                    <div class="publications__box">
+                        <!-- <img class="publications__box-img img-responsive" src="" alt=""> -->
+                        <div class="publications__box-text">
+                            <a class="publications__box-link" href="">Currency control is dead, long live currency
+                                control!</a>
+                            <p class="publications__box-paragraph">June 14, 2018</p>
+                            <p class="publications__box-desc">Experts hold conferences, round tables and other
+                                events on
+                                "liberalization of currency legislation." Lawyers-experts-novelists rub their
+                                fingers
+                                about "ctrl + c / ctrl + v".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="publications__button"><button class="publications__btn" type="button">More
+                        publications</button></div>
+            </div>
+        </section>
+        <footer class="footer container" id="footer">
+            <div class="footer__text">
+                <div class="footer__place">
+                    <p class="footer__place-text">Kyiv, Mechnikova str., 14/1</p>
+                    <a class="footer__place-link"
+                        href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+02000/@50.4367983,30.5278341,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800?entry=ttu">On
+                        map</a>
+                </div>
+                <div class="footer__contact">
+                    <a class="footer__fb" aria-label="facebook-link" href=""><svg width="39" height="38"
+                            viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_35855_3255)">
+                                <path
+                                    d="M38.5 19.1161C38.5 8.55857 29.9934 0 19.5 0C9.00658 0 0.5 8.55857 0.5 19.1161C0.5 28.6575 7.44803 36.5659 16.5312 38V24.6419H11.707V19.1161H16.5312V14.9046C16.5312 10.1136 19.3678 7.46723 23.7078 7.46723C25.7866 7.46723 27.9609 7.84059 27.9609 7.84059V12.545H25.5651C23.2048 12.545 22.4688 14.0185 22.4688 15.5302V19.1161H27.7383L26.8959 24.6419H22.4688V38C31.552 36.5659 38.5 28.6575 38.5 19.1161Z"
+                                    fill="#24A3FF" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_35855_3255">
+                                    <rect width="38" height="38" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a class="footer__phone" href="tel:0800211927">0800 211 927</a>
+                    <a class="footer__mail" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+                </div>
+                <div class="footer__policity-item">
+                    <p class="footer__policity">© 2021 HLEGAL Law company, LLC</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

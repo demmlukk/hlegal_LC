@@ -1,0 +1,61 @@
+.description {
+    margin-top: 27px;
+
+    &__info {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 30px;
+        color: $text-black-color;
+    }
+
+    &__info br {
+        display: block;
+        content: "";
+        margin-top: 20px;
+    }
+
+    &__headline {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        @include gradient-text;
+        margin-top: 29px;
+    }
+
+    @media (min-width: 768px) {
+        margin-top: 55px;
+
+        &__headline {
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+
+    @media (min-width: 991px) {
+        display: flex;
+        justify-content: space-between;
+
+        &__info {
+            width: 53%;
+        }
+
+        &__headline {
+            margin-top: 0;
+            width: 40%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        justify-content: space-evenly;
+        margin-top: 82px;
+
+        &__info {
+            width: 50%;
+        }
+
+        &__headline {
+            width: 27%;
+        }
+    }
+}

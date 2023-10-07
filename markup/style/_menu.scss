@@ -1,0 +1,218 @@
+.menu {
+    margin-top: 7px;
+    z-index: 995;
+
+    @keyframes slideDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__list {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: auto;
+        list-style: none;
+        padding: 0 12px 12px 12px;
+        background: $menu-list-bg;
+        border-radius: 12px;
+        width: 100%;
+        height: calc(100vh - 250px);
+        overflow: auto;
+        text-wrap: nowrap;
+    }
+
+    &__list--on-white {
+        background: $text-color;
+    }
+
+
+    &__list.active {
+        display: block;
+        animation: slideDown 0.8s ease forwards;
+
+    }
+
+    &__list a {
+        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: $links-btn-color;
+        padding: 7px 120px;
+        margin-top: 15px;
+        background: $menu-list-link;
+        border-radius: 12px;
+        display: block;
+    }
+
+    &__list a.active {
+        color: $button-bg-color;
+    }
+
+    &__list a:active {
+        background: $dots-grey-color;
+    }
+
+    &__btn {
+        position: relative;
+        display: block;
+        margin-top: 8px;
+        width: 32px;
+        height: 32px;
+        border: none;
+        border-radius: 8px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all .8s;
+        &:hover {
+            background-color: rgba(245, 245, 250, 0.2);
+        }
+    }
+
+    &__btn::before,
+    &__btn::after,
+    &__btn span {
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 2px;
+        background: $text-color;
+        border-radius: 2px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transition: all .8s;
+    }
+    &__btn::before {
+        top: 35%;
+    }
+    &__btn::after {
+        top: 65%;
+    }
+    
+    &__btn--on-white::before,
+    &__btn--on-white::after,
+    &__btn--on-white span {
+        background: $place-color;
+    }
+
+    &__btn.close {
+        &::before {
+            top: 50%;
+            transform: translate(-50%,-50%) rotate(225deg);
+        }
+        &::after {
+            top: 50%;
+            transform: translate(-50%,-50%) rotate(-225deg);
+        }
+        & span {
+            width: 0;
+        }
+    }
+
+
+
+    &__btn:active {
+        background: $dots-grey-color;
+
+    }
+
+    @media (min-width: 768px) {
+        grid-column: 3 / -2;
+        grid-row: 3;
+        padding: 0 45px;
+
+        &__btn {
+            display: none;
+        }
+
+        & {
+            position: static;
+        }
+
+        &__list {
+            position: static;
+            background: none;
+            display: flex;
+            list-style: none;
+            padding: 0;
+            height: auto;
+            margin-top: 5px;
+            border-radius: 0;
+        }
+
+        &__list li {
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+        }
+
+        &__list a {
+            background: none;
+            padding: 0;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $text-color;
+            margin-right: 16px;
+            width: auto;
+            border-radius: 0;
+            border-bottom: 2px;
+            transition: ease 0.1s;
+        }
+
+        &__list a.active {
+            color: $button-bg-color;
+            border-bottom: 2px solid $button-bg-color;
+        }
+
+        &__list a:hover {
+            border-bottom: 2px solid $text-color;
+        }
+
+
+        &__list--on-white a {
+            color: $links-btn-color;
+        }
+
+        &__list--on-white a:hover {
+            color: $links-btn-color;
+            border-bottom: 2px solid $links-btn-color;
+        }
+
+        &__list--on-white a.active {
+            color: $button-bg-color;
+            border-bottom: 2px solid $button-bg-color;
+        }
+
+    }
+
+    @media (min-width: 991px) {
+        margin-top: -40px;
+        padding-right: 0;
+
+        & {
+            justify-self: end;
+        }
+
+        &__list {
+            margin-top: 0;
+            white-space: nowrap;
+        }
+
+        &__list a {
+            margin-right: 0;
+            margin-left: 16px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.logo-box {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .logo-box {
+    grid-column: 2/-3;
+    margin-top: -7px;
+    padding: 0 45px;
+  }
+  .logo-box__link img {
+    width: 130px;
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .logo-box {
+    padding-left: 0;
+    margin-top: 26px;
+    grid-row: 1/-1;
+    grid-column: 1;
+  }
+}
+/*# sourceMappingURL=logo-box.css.map */

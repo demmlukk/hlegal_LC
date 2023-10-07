@@ -1,0 +1,101 @@
+.header-top {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    background: $header-bg-color;
+    padding: 12px 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    @media (min-width: 768px) {
+        & {
+            position: static;
+            background: none;
+            padding: 38px 44px;
+            justify-content: flex-start;
+        }
+
+        &__adress,
+        &__fb {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0;
+            clip: auto;
+            overflow: visible;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        &__adress a {
+            transition: ease 0.4s;
+        }
+
+        &__adress a:hover {
+            color: $button-bg-color;
+        }
+
+        &__fb path {
+            transition: ease 0.4s;
+        }
+
+        &__fb:hover path {
+            fill: $button-bg-color;
+        }
+
+        &__fb--on-white path {
+            fill: $btn-grey-color;
+        }
+
+        &__adress::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: $dots-grey-color;
+            border-radius: 10px;
+            align-self: center;
+            margin-right: 6px;
+        }
+
+        &__fb::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: $dots-grey-color;
+            border-radius: 10px;
+            align-self: center;
+            margin-right: 6px;
+            margin-left: 6px;
+        }
+
+        &__adress a {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: $text-color;
+        }
+
+        &__adress--on-white a {
+            color: $btn-grey-color;
+        }
+
+    }
+
+    @media (min-width: 991px) {
+        & {
+            white-space: nowrap;
+            grid-column: 2 / -1;
+            justify-content: flex-end;
+            display: inline-flex;
+            align-items: center;
+            margin-top: -15px;
+            padding-right: 0;
+            z-index: 10;
+
+        }
+    }
+}

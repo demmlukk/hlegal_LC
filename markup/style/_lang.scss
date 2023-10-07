@@ -1,0 +1,40 @@
+.lang {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+
+    & a {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: $text-color;
+        text-transform: uppercase;
+        padding: 5px 7px;
+        border-radius: 8px;
+        transition: ease 0.4s;
+    }
+
+    & a.active {
+        background: $button-bg-color;
+        color: $text-color;
+    }
+
+    & a:hover {
+        background: $btn-hover-color;
+    }
+
+    &--on-white a {
+        color: $btn-grey-color;
+    }
+
+    &--on-white a:hover {
+        background-color: $menu-list-link;
+    }
+
+    @media (min-width: 768px) {
+        margin-right: 6px;
+    }
+}
